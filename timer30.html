@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Break Out Extension</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <style>
+    html {
+        background-image: url("https://cdn.glitch.com/f26fc0fe-73ac-423a-83fd-08296201202c%2Fgreen.jpg?v=1603038289219");
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+      }  
+  </style>
+    <p id="test"></p>
+    <script>
+      window.onload = function countDownTime() {
+        var duration = 30*60; // convert minutes into seconds
+        var counter = setInterval(function() {
+          var currentDate = new Date().getTime();
+          var finalDate = new Date(currentDate);
+          finalDate.setMinutes(finalDate.getMinutes() + duration * 60);
+
+          var hour = Math.floor((duration % (60 * 60 * 24)) / (60 * 60));
+          var minute = Math.floor((duration % (60 * 60)) / 60);
+          var second = Math.floor(duration % 60);
+
+          duration--;
+
+          document.getElementById("test").innerHTML =
+            minute + "m " + second + "s ";
+
+          if (duration < 0) {
+            clearInterval(counter);
+            document.getElementById("test").innerHTML = "Time to Break Out of that Zoom Fatigue!";
+          }
+        }, 1000);
+        setTimeout(() => window.open('FeatureSelection.html'), 30*60*1000);
+      };
+    </script>
+  </body>
+</html>
