@@ -1,0 +1,41 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  color: black;
+  margin: 2em;
+  text-align: center;
+}
+
+h1 {
+  font-style: bold;
+  color: Black;
+  font-size: 80px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+head {
+  color: black;
+}
+.button1 {
+  border-radius: 8px;
+  font-size:20px;
+}
+.button2 {
+  border-radius: 8px;
+  font-size:20px;
+}
+.button3 {
+  border-radius: 8px;
+  font-size:20px;
+}
+
+a {
+  font-size: 15px;
+}
+
+img {
+  border-radius: 8px;
+}
